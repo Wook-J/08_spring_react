@@ -1,0 +1,25 @@
+React 사용 전에는 요청주소 바뀔 때에는 깜박 거렸음(by Spring 사용) -> MPA
+
+React 에서 라우터를 이용하며 주소창에 주소변경해도 서버단에 페이지 요청을 보내는 것이 아니라
+컴포넌트에 요청 보냄 -> URL경로에 따라 내부에 있는 컴포넌트만 변함! -> SPA
+
+라우터를 이용할 예정임.....
+
+터미널에서 
+yarn add react-router-dom + enter
+
+08_react-router-dom.pdf 복습하기
+그 중 주요 컴포넌트(필수로 이용해야 함) 부분 해석다시 해보기
+
+Link : a태그 대신 사용 (F12 눌러서 요소 선택하면 a태그로 읽힘)
+<Link to="/about">About</Link>      -> <a href=""> </a>
+
+(+NavLink -> className 부분에 active가 추가됨)
+
+
+훅(Hooks)은 앞 부분에 use 가 보통 붙어있음(필수는 아니고 옵션임, 필요할 때 쓰면 됨)
+
+
+react-router-dom import 할 때 조심!
+import { NavLink } from 'react-router-dom'; 가 아니라
+import { NavLink } from 'react-router'; 임!!

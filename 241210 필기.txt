@@ -1,0 +1,69 @@
+리엑트가 비동기 요청을 스프링 서버에 보내면
+스프링에서 처리해서 보내기만 함
+
+git이 관리하는게 중첩되면 에러뜰 수 있으면 하나 삭제하기
+
+bash에서 직접 vscode 열기
+
+git bash 에서 cd + b tab + enter (디렉토리 이동)
+
+code . + enter (VSCode 실행)
+
+Java Version 21
+Group 변경 : edu.kh
+Package 변경 : edu.kh.admin
+
+추가할 dependencies (여기선 thymeleaf 필요 없음)
+1. Spring Web
+2. JDBC API
+3. Oracle Driver
+4. MyBatis Framework
+5. Spring Boot DevTools
+6. Spring Configuration Processor
+7. Lombok
+8. Spring Security
+
+---------------------------------------------------------------------------------
+index.js 에서 const root 부분 -> 가상DOM 만들어서 적용
+어떤 기준으로 감지?? -> 상태(State) 가상 DOM에 일어난 변화를 감지해서 실제 DOM에 덮어쓰기
+
+App이라는 Component 호출
+
+터미널(ctrl shift `)에 yarn start해서 해당 React 서버 돌림
+1. 터미널 형태가 bash 가 맞는 지 확인
+2. 경로도 확인 (/c/workspace/08_spring_react/react/boardproject-admin-client)
+
+user한테 값을 세팅하려면 로그인/로그아웃이 필요함
+-> 이 처리를 하려면 ContextAPI 사용해야 하는데 이메일과 비밀번호가 필요해서 다 집어넣음
+
+터미널 에서 Ctrl c : React 서버 종료
+
+---------------------------------------------------------------------------------
+
+axios?
+07_axios.pdf React에서 사용하는 거의 필수라이브러리
+JSON.Stringfy, JSON.parse 를 안해도 자동변환해줌
+
+CORS (Cross-Origin Resource Sharing)
+CSRF (Cross-Site Request Forgery) - 사이트간 요청 위조 공격 방지 위한 보안 방식
+
+사용방법
+fetch 대신에 axios 사용하면 됨
++ parsing이 필요없어서 .then 이 1개만 있으면 됨
+
+위에껀 현재 잘 안쓰임 (안쪽에서 callback 함수들이 중첩해서 일어남, callback hell 발생)
+-> 위 문제를 막고자 async await 를 사용함 (응답값을 변수에 담아서 사용함)
+
+설치방법
+터미널에 yarn add axios + enter
+
+확인방법 : package.json에 dependencies 또는 node_modules 폴더에서 axios 있는 지 확인
+
+---------------------------------------------------------------------------------------------
+semi 수정
+
+header.html : 
+ETC 부분 (기본 3칸)
+- 비회원일 때 5칸 필요   ->  2칸 더 필요
+- 회원일 때 3칸 필요      -> 필요없음
+- 관리자일 때 4칸 필요   -> 1칸 더 필요
