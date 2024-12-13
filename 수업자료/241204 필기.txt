@@ -1,0 +1,21 @@
+Auto Import - ES6, TS, JSX, TSX 설치
+- 파일명입력할때 자동으로 import 해주는 extension
+
+Reactjs code snippets(charalampos karypidis 꺼)
+- 클래스형 컴포넌트, 함수형 컴포넌트 -> 자동완성(by 단축키 rcc, rsc)
+
+ESLint
+- 코드문법에 대한 오류를 발견하고 수정해주는 기능 제공
+- 추가로 규칙을 정의할 수 있음
+
+Prettier - Code formatter
+- 보통 ESLint 하고 같이 사용
+- 가독성 떨어지거나 코드정렬이 잘 안되어있는 경우
+
+
+
+1. State lifting up : 상태 끌어올리기
+
+2. Props Drilling : 상태 내리꽂기
+
+context API를 이용해서 전역적으로 관리....??

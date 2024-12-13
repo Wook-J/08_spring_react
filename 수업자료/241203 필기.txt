@@ -1,0 +1,78 @@
+React 주요 7가지 특징
+
+1. 상태 (State) : 컴포넌트 내부에서 관리되는 데이터 or 컴포넌트의 현재 상태를 나타내는 값
+    - React 에서 상태가 변경되면 해당 컴포넌트와 그 자식 컴포넌트가 다시 랜더링(화면상에 다시 그려짐)됨
+      ex) 로그인 컴포넌트 안에서 다루게 될 상태값(유저가 입력한 ID, PW 등)
+          -> 위 상태값이 변경되면 화면상에서 다시 뿌려짐
+
+    - 주요 특징
+      1) 컴포넌트 내부에서만 관리 - 다른 컴포넌트와 공유하려면 props를 통해 전달해야 함
+      2) 변경가능(mutable) - 직접 값을 수정하는게 아니라 상태를 변경하는 함수 setter를 사용해야 함
+          ex) const [count, setCount] = useState(0);
+               count = count + 1;    // ❌ 상태 직접 수정은 React가 감지하지 못함.
+               setCount(count + 1);  // ✅ setter 함수를 사용해 수정.
+          (+ 비동기적으로 동작해서 콜백함수를 별도로 정의해야 함)
+      3) UI 자동 업데이트 - 상태가 변경되면 React는 해당 컴포넌트와 관련 UI 리랜더링(setter 사용하면 됨)
+
+2. 컴포넌트 (Component) : 레고 블록 같은 것임
+
+3. 가상 DOM (Virtual Document Object Model)
+   -> 변경된 부분만 실제 DOM에 적용 (빠르고 효율적으로 UI가 업데이트 됨)
+
+4. 단방향 데이터 흐름 (부모 -> 자식)
+자식에서 전달값 받을 땐 props.~~~로 받아야 함 (00_React란.pdf p2 참고)
+
+5. JSX (JavaScript XML) : JS에서 HTML을 작성할 수 있는 특별한 문법
+
+6. React Hooks : 함수형 컴포넌트에서 상태(state)와 생명주기(lifecycle) 기능을 사용할 수 있도록 만든 API
+    - 이전에는 클래스형 컴포넌트에서만 상태와 생명주기 기능을 사용할 수 있었음
+      ex) useState, useEffect, userContext, ...
+
+7. SPA (Single Page Application) : 최근 회사의 트랜드
+    - 기존 방식(Multi Page Application)은 사용자가 새로운 페이지로 이동할 때마다 서버에 요청함
+
+
+★ React 기본 디렉터리 구조 ★ (00_React란.pdf p3~ 참고)
+
+Redux(React 상태관리 라이브러리), NextJs...??
+Vue.js..?(리액트보다는 쉬움)
+스프링 + (Vue OR React)
+
+-----------------------------------------------------------------------------------------------------
+(cf) workspace 자체가 git에서 관리되고 있으면 react 설치하면 안됨...!! 노트북 주의)
+node.js 홈페이지 들어가서 다운 및 설치
+07_React 폴더 생성 후 open git Bash here 클릭
+(npm : node package manager)
+(+ React 앱 이름 규칙 : 01_window에서_React_시작하기.pdf p2)
+
+node -v 				nodejs 버전정보 확인
+npm install -g yarn 		yarn 설치
+yarn --version			yarn 버전 확인
+yarn create react-app my-app	React 앱(프로젝트) 생성하기 (시간 좀 걸림)
+ls				폴더 보기
+cd my-app/			my-app 폴더로 이동 (master 브랜치 생성)
+code .				해당 경로에서 VSCode 실행
+
+VSCode 내
+Ctrl + Shift + p 누른 후 default
+-> 터미널 : 기본 프로필 선택 클릭 -> Git Bash 선택
+
+Ctrl + shift + ` : 터미널 열기
+터미널창 우측 상단에 bash 써져 있는지 확인
+yarn start				프로젝트 실행 -> localhost:3000 으로 해서 크롬창 새로 열림
+
+react 기본 포트 : 3000
+nodejs 기반으로 굴러감
+
+Ctrl c : 터미널 종료
+
+-----------------------------------------------------------------------------------------------------
+
+React 에서는 class가 아니라 className임
+index.js 은 안 건드려도 됨!
+우리가 건드리는 영역은 App.js 임!!
+
+------------------------------------------------------------------------------------------------------
+1209시험 내용은 아주김.....
+프로그램 설계원칙이 설명되어있음
+위 원칙에 대해 제대로 코드가 작성되어있는지 검사

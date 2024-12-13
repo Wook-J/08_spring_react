@@ -1,0 +1,25 @@
+05_Context api.pdf
+
+workspace/07_React 를 기준으로 Launch
+
+Window - showView에서 Console, Progress
+
+Create new Spring Starter Project 또는 Ctrl + N 후 Spring Starter Project
+
+Name : myAppServer
+Java Version : 21
+Group : edu.kh
+Package : edu.kh.myapp
+Next 클릭
+
+Spring Boot Version : 3.4.0
+필요한 Dependencies
+이제 React로 화면만들어서 thymeleaf 필요없음
+Spring Boot 는 API만 제공함
+- 241205 수업에서는 Spring Web 필요
+
+application.properties
+server.port=80 작성
+
+MainController
+React 에서는 서버에 비동기 요청을 보내므로 @RestController 어노테이션 필요
